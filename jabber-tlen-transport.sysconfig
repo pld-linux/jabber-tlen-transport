@@ -1,0 +1,8 @@
+# Customized setings for jggtrans
+
+# Define jggtrans command line options
+JTT_FLAGS="-c /etc/jabber/jabber-tlen-transport.xml"
+
+# Define nice level for jggtrans 
+SERVICE_RUN_NICE_LEVEL="+5"
+

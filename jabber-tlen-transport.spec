@@ -54,7 +54,7 @@ if [ -f /etc/jabber/secret ] ; then
 	SECRET=`cat /etc/jabber/secret`
 	if [ -n "$SECRET" ] ; then
 		echo "Updating component authentication secret in jggtrans.xml..."
-		perl -pi -e "s/>secret</>$SECRET</" /etc/jabber/jggtrans.xml
+		perl -pi -e "s/>secret</>$SECRET</" /etc/jabber/jabber-tlen-transport.xml
 	fi
 fi
 /sbin/chkconfig --add jabber-tlen-transport

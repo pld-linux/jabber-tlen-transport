@@ -10,6 +10,7 @@ Source0:	http://dl.sourceforge.net/jtlentrans/tt-%{version}.tar.bz2
 Source1:	%{name}.init
 Source2:	%{name}.sysconfig
 URL:		http://sourceforge.net/projects/jtlentrans/
+BuildRequires:	expat-devel
 BuildRequires:	libtlen-devel
 BuildRequires:	libxode-devel
 BuildRequires:	openssl-devel

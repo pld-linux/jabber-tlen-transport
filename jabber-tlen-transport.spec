@@ -13,10 +13,10 @@ URL:		http://sourceforge.net/projects/jtlentrans/
 BuildRequires:	libtlen-devel
 BuildRequires:	libxode-devel
 BuildRequires:	openssl-devel
-Requires:	jabber-common
+Requires(pre):	jabber-common
 Requires(post,preun):	/sbin/chkconfig
 Requires(post):	/usr/bin/perl
-Requires(pre):	jabber-common
+Requires:	jabber-common
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description

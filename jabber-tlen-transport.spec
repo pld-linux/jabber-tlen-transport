@@ -14,9 +14,9 @@ BuildRequires:	expat-devel
 BuildRequires:	libtlen-devel
 BuildRequires:	libxode-devel
 BuildRequires:	openssl-devel
-Requires(pre):	jabber-common
-Requires(post,preun):	/sbin/chkconfig
 Requires(post):	/usr/bin/perl
+Requires(post,preun):	/sbin/chkconfig
+Requires(pre):	jabber-common
 Requires:	jabber-common
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -77,7 +77,7 @@ fi
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog DEBUG DONE README THANKS TODO
 %attr(755,root,root) %{_sbindir}/*
-%attr(640,root,jabber) %config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/jabber/jabber-tlen-transport.xml
+%attr(640,root,jabber) %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/jabber/jabber-tlen-transport.xml
 %attr(754,root,root) /etc/rc.d/init.d/jabber-tlen-transport
 %attr(770,root,jabber) /var/lib/jabber/tlen
-%config(noreplace) %verify(not size mtime md5) /etc/sysconfig/jabber-tlen-transport
+%config(noreplace) %verify(not md5 mtime size) /etc/sysconfig/jabber-tlen-transport

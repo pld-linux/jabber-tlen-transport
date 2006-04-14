@@ -14,7 +14,6 @@ BuildRequires:	expat-devel
 BuildRequires:	libtlen-devel
 BuildRequires:	libxode-devel
 BuildRequires:	openssl-devel
-Requires(post):	/usr/bin/perl
 Requires(post):	sed >= 4.0
 Requires(post,preun):	/sbin/chkconfig
 Requires(pre):	jabber-common

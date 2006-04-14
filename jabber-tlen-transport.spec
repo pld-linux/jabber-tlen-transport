@@ -15,6 +15,7 @@ BuildRequires:	libtlen-devel
 BuildRequires:	libxode-devel
 BuildRequires:	openssl-devel
 Requires(post):	/usr/bin/perl
+Requires(post):	sed >= 4.0
 Requires(post,preun):	/sbin/chkconfig
 Requires(pre):	jabber-common
 Requires:	jabber-common
@@ -51,11 +52,11 @@ install %{SOURCE2} $RPM_BUILD_ROOT/etc/sysconfig/jabber-tlen-transport
 rm -rf $RPM_BUILD_ROOT
 
 %post
-if [ -f /etc/jabber/secret ] ; then
-	SECRET=`cat /etc/jabber/secret`
+if [ -f %{_sysconfdir}/jabber/secret ] ; then
+	SECRET=`cat %{_sysconfdir}/jabber/secret`
 	if [ -n "$SECRET" ] ; then
 		echo "Updating component authentication secret in jabber-tlen-transport.xml..."
-		perl -pi -e "s/>secret</>$SECRET</" /etc/jabber/jabber-tlen-transport.xml
+		%{__sed} -i -e "s/>secret</>$SECRET</" /etc/jabber/jabber-tlen-transport.xml
 	fi
 fi
 /sbin/chkconfig --add jabber-tlen-transport

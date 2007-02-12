@@ -1,5 +1,5 @@
 Summary:	Tlen transport module for Jabber
-Summary(pl):	Modu≥ transportowy Tlen dla systemu Jabber
+Summary(pl.UTF-8):   Modu≈Ç transportowy Tlen dla systemu Jabber
 Name:		jabber-tlen-transport
 Version:	0.3.6
 Release:	2
@@ -23,9 +23,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 This module allows Jabber to communicate with Tlen server.
 
-%description -l pl
-Modu≥ ten umoøliwia uøytkownikom Jabbera komunikowanie siÍ z
-uøytkownikami komunikatora Tlen.
+%description -l pl.UTF-8
+Modu≈Ç ten umo≈ºliwia u≈ºytkownikom Jabbera komunikowanie siƒô z
+u≈ºytkownikami komunikatora Tlen.
 
 %prep
 %setup -q -n tt-%{version}

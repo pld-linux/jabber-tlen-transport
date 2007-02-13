@@ -1,5 +1,5 @@
 Summary:	Tlen transport module for Jabber
-Summary(pl.UTF-8):   Moduł transportowy Tlen dla systemu Jabber
+Summary(pl.UTF-8):	Moduł transportowy Tlen dla systemu Jabber
 Name:		jabber-tlen-transport
 Version:	0.3.6
 Release:	2
